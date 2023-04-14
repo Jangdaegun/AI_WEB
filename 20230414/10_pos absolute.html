@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position Absolute</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+      }
+      .mini_box {
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        left: 10px;
+        top: 50px;
+      }
+      .pink {
+        background-color: pink;
+      }
+      .red {
+        background-color: red;
+        left: 50px;
+        top: 50px;
+      }
+      .green {
+        background-color: green;
+        left: 0px;
+        top: 0px;
+      }
+      .blue {
+        background-color: blue;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red"></div>
+    <div class="box green">
+      <div class="mini_box pink">녹색(static)</div>
+    </div>
+    <div class="box blue">
+      <div class="mini_box pink">파랑(relative)</div>
+    </div>
+  </body>
+</html>
