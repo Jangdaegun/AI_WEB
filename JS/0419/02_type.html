@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 20;
+      console.log(20 == "20");
+      console.log(20 === "20");
+
+      console.log(false);
+      console.log(true);
+      console.log(Boolean(0)); //false
+      console.log(Boolean(null)); //false
+      console.log(Boolean("")); //false
+      console.log(Boolean(NaN)); //false
+      console.log(Boolean(undefined)); //false
+      console.log(Boolean(" "));
+
+      let sentense = "안녕 잘지내니";
+      console.log(sentense.length);
+      console.log(sentense.charAt(0));
+      console.log(sentense[0]);
+      console.log(sentense[sentense.length - 1]);
+
+      let arr1 = [];
+      arr1[5] = "최은지";
+      arr1[0] = 10;
+      arr1[2] = true;
+      let arr2 = [1, "안녕", "잘가", arr1, null, false, [1, 2, 3]];
+      console.log(arr1);
+      console.log(arr2);
+      for (let i = 0; i < arr1.length; i++) console.log(arr1[i]);
+      console.log("--------");
+      for (let item of arr2) console.log(item);
+      console.log("--------");
+
+      for (let item in arr1) console.log(item);
+      console.log("--------");
+    </script>
+  </body>
+</html>

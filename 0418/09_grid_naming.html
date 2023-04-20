@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr 200px 1fr;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: "Header Header" "Aside Section" "Footer Footer";
+      }
+      #container > div {
+        background-color: aqua;
+        border: 1px solid black;
+        overflow: hidden;
+      }
+      .Header {
+        grid-area: Header;
+      }
+      .Aside {
+        grid-area: Aside;
+      }
+      .Section {
+        grid-area: Section;
+      }
+      .Footer {
+        grid-area: Footer;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="Header"><h1>Header</h1></div>
+      <div class="Aside"><h1>Aside</h1></div>
+      <div class="Section"><h1>Section</h1></div>
+      <div class="Footer"><h1>Footer</h1></div>
+    </div>
+  </body>
+</html>

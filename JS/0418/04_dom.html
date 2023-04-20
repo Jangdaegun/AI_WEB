@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">Lorem, ipsum.</h1>
+    <img src="" alt="" />
+    <h1>Lorem, ipsum dolor.</h1>
+    <img src="" alt="" id="abcd" />
+    <script>
+      let title = document.querySelector("#title");
+      title.style.color = "blue";
+
+      let img = document.getElementById("abcd");
+      img.src =
+        "https://www.svnlabs.com/blogs/wp-content/uploads/2011/11/CSS-Sprites-generator.png";
+
+      let h1list = document.querySelectorAll("h1");
+      for (let item of h1list) item.style.background = "yellow";
+
+      h1list[1].textContent = prompt("당신의 이름은 뭔가요?");
+
+      let imglist = document.getElementsByTagName("img");
+      imglist[0].src = "https://www.web2generators.com/img/sprite-sample.png";
+    </script>
+  </body>
+</html>

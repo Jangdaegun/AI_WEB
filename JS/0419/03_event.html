@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="one" />
+    <input type="text" id="two" />
+    <button id="add">더하기</button>
+    <button id="minus">빼기</button>
+    <button id="mul">곱하기</button>
+    <button id="division">나누기</button>
+    <button id="mod">나머지</button>
+    <h1></h1>
+    <script>
+      let one = document.querySelector("#one");
+      let two = document.getElementById("two");
+      let add = document.querySelector("#add");
+      let minus = document.querySelector("#minus");
+      let mul = document.querySelector("#mul");
+      let division = document.querySelector("#division");
+      let mod = document.querySelector("#mod");
+      let result = document.querySelector("h1");
+
+      add.onclick = function () {
+        let num1 = one.value;
+        let num2 = two.value;
+        result.textContent = Number(num1) + Number(num2);
+      };
+
+      minus.onclick = function () {
+        let num1 = one.value;
+        let num2 = two.value;
+        result.textContent = Number(num1) - Number(num2);
+      };
+
+      mul.onclick = () => {
+        let num1 = one.value;
+        let num2 = two.value;
+        result.textContent = Number(num1) * Number(num2);
+      };
+
+      division.onclick = () => {
+        let num1 = one.value;
+        let num2 = two.value;
+        result.textContent = Number(num1) / Number(num2);
+      };
+
+      mod.addEventListener("click", () => {
+        let num1 = one.value;
+        let num2 = two.value;
+        result.textContent = Number(num1) % Number(num2);
+      });
+
+      //   const choices = ["rock", "paper", "scissors"];
+
+      //   function computerPlay() {
+      //     return choices[Math.floor(Math.random() * choices.length)];
+      //   }
+
+      //   function playRound(playerSelection, computerSelection) {
+      //     if (playerSelection === computerSelection) {
+      //       return "무승부입니다!";
+      //     } else if (
+      //       (playerSelection === "rock" && computerSelection === "scissors") ||
+      //       (playerSelection === "paper" && computerSelection === "rock") ||
+      //       (playerSelection === "scissors" && computerSelection === "paper")
+      //     ) {
+      //       return "이겼습니다!";
+      //     } else {
+      //       return "졌습니다!";
+      //     }
+      //   }
+
+      //   const buttons = document.querySelectorAll("button");
+
+      //   buttons.forEach((button) => {
+      //     button.addEventListener("click", function () {
+      //       const playerSelection = button.id;
+      //       const computerSelection = computerPlay();
+      //       const result = playRound(playerSelection, computerSelection);
+      //       document.getElementById("result").textContent = result;
+      //     });
+      //   });
+    </script>
+  </body>
+</html>

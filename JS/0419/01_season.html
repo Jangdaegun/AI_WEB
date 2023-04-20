@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>당신이 태어난 계절은?</h1>
+    <img src="" alt="" />
+    <script>
+      let image = document.querySelector("img");
+      let mymonth = prompt("몇월생이니");
+      if (mymonth == 12 || mymonth == 1 || mymonth == 2)
+        image.src =
+          "https://img.animalplanet.co.kr/news/2022/10/22/700/426x9p55qcar8r3u7ome.jpg";
+      else if (mymonth >= 3 && mymonth <= 5)
+        image.src =
+          "https://img.animalplanet.co.kr/news/2022/10/22/700/0x848ldlr91cd3265h97.jpg";
+      else if (mymonth == 6 || mymonth == 7 || mymonth == 8)
+        image.src =
+          "https://img.animalplanet.co.kr/news/2022/10/22/700/rc550046dkqh082jwpig.jpg";
+      else if (mymonth == 9 || mymonth == 10 || mymonth == 11)
+        image.src =
+          "https://img.animalplanet.co.kr/news/2022/10/22/700/0tmw7dy7932p2q62v50i.jpg";
+      else
+        image.src =
+          "https://cdn.akamai.steamstatic.com/steam/apps/1534200/header.jpg?t=1616065824";
+    </script>
+  </body>
+</html>
