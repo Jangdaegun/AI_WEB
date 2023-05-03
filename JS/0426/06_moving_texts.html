@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function nextRandomInteger(limit) {
+        return Math.round(Math.random() * limit);
+      }
+
+      let randomAlphabet = (function () {
+        let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        return function () {
+          return alphabet[nextRandomInteger(alphabet.length - 1)];
+        };
+      })();
+
+      function randomSpeed(maxSpeed) {
+        return Math.random() * maxSpeed - Math.random() * maxSpeed;
+      }
+
+      //최대 너비와 높이
+      let canvasWidth = 700;
+      let canvasHeight = 400;
+
+      function MovingText() {
+        this.x = nextRandomInteger(canvasWidth);
+        this.y = nextRandomInteger(canvasHeight);
+        this.vx = randomSpeed(10);
+        this.vy = randomSpeed(10);
+        this.text = document.createElement("h1");
+        this.text.innerText = randomAlphabet();
+        this.text.style.position = "fixed";
+        let randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        this.text.style.color = "#" + randomColor;
+
+        document.body.appendChild(this.text);
+      }
+      MovingText.prototype.move = function () {
+        if (this.x < 0 || this.x > canvasWidth) this.vx *= -1; //방향 반대로
+        if (this.y < 0 || this.y > canvasHeight) this.vy *= -1; //방향 반대로
+        this.x += this.vx;
+        this.y += this.vy;
+        //좌표 위치 조정
+        this.text.style.left = this.x + "px";
+        this.text.style.top = this.y + "px";
+      };
+
+      let movingTexts = [];
+
+      for (let i = 0; i < 100; i++) movingTexts.push(new MovingText());
+      setInterval(function () {
+        for (let i in movingTexts) movingTexts[i].move();
+      }, 1000 / 30);
+    </script>
+  </body>
+</html>

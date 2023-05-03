@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      h1 {
+        user-select: none;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#one").on("click", function () {
+          alert("Hello");
+        });
+        $("#two").click(function () {
+          alert("하이");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="one">Lorem, ipsum dolor.</h1>
+    <h1 id="two">Lorem, ipsum</h1>
+    <script>
+      //banila js
+      let one = document.getElementById("one");
+      let two = document.querySelector("#two");
+      one.style.color = "red";
+      two.style.background = "cyan";
+      //jquery
+      one = $("#one");
+      two = $("#two");
+      one.css("background-color", "yellow");
+      two.css("color", "blue").css("border", "1px solid black");
+    </script>
+  </body>
+</html>

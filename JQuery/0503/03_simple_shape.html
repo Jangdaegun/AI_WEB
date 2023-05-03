@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="myjq.js"></script>
+    <style>
+      .box {
+        width: 60px;
+        height: 60px;
+        background-color: blueviolet;
+        float: left;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box border_box"></div>
+    <div class="box"></div>
+    <div class="box border_box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box border_box"></div>
+
+    <script>
+      //   $(".box").filter(".border_box").css("border", "3px solid black");
+      let box = document.getElementsByClassName("box border_box");
+
+      for (const items of box) items.style.border = "3px solid black";
+    </script>
+  </body>
+</html>
