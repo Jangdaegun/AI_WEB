@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>결과 확인</h1>
+    <h1 id="result"></h1>
+    <h1>위 결과 확인</h1>
+    <script>
+      fetch("https://jangdaegun.github.io/AI_WEB/JQuery/0503/myjson.json")
+        .then((response) => {
+          if (!response.ok) throw new Error("400 or 500 error");
+          return response.json();
+        })
+        .then((result) => {
+          console.log(result);
+          let h1 = document.querySelector("#result");
+          h1.textContent = result["price"];
+        })
+        .catch(() => {
+          console.log("error");
+        });
+    </script>
+  </body>
+</html>
